@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const accountSid = 'ACe92ffa9ecaacc792d266fcad65fc0596';
 const authToken = '3dd989db6261a9dacdb26ee8778dd3ba';
 const client = require('twilio')(accountSid, authToken);
-
+const PORT = process.env.PORT || 3000;
 const cors = require('cors'); // Importa el módulo 'cors'
 
 const app = express();
@@ -106,6 +106,6 @@ const enviarMessageChatbot = async(message) => {
   
 }
 
-server.listen(3000, () => {
-  console.log('server running at http://localhost:3000');
+server.listen(PORT, () => {
+  console.log('server running at http://localhost:3000',PORT);
 });
