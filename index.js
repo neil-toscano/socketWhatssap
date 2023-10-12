@@ -27,7 +27,7 @@ const io = new Server(server,{
 
 app.get('/', (req, res) => {
   console.log("hola")
- res.send("hola")
+ res.send("hola vercel")
   // res.sendFile(join(__dirname, 'index.html'));
 });
 app.post('/whatsapp-webhook', async(req, res) => {// Mensage llega de twilio(alguna otra plataforma)
